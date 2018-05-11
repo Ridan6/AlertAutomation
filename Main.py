@@ -15,8 +15,6 @@ import time
 import msvcrt
 import re
 
-live = 'https://sem.wdf.sap.corp/sap/hana/uis/clients/ushell-app/shells/fiori/FioriLaunchpad.html?siteId=sap.secmon.ui.mobile.launchpad|ETDLaunchpad&sap-language=en#AlertsList-show&/?orderBy=creationDate&orderDesc=true&status=OPEN&measureContext=Alert,Log&timeSelectionType=relative&timeLast=&timeType=days&uistate=id-1520962806818-186&lastNav=20180313174007'
-test = 'https://sem.wdf.sap.corp/sap/hana/uis/clients/ushell-app/shells/fiori/FioriLaunchpad.html?siteId=sap.secmon.ui.mobile.launchpad|ETDLaunchpad&sap-language=en#AlertsList-show&/?orderBy=creationDate&orderDesc=false&status=OPEN,INVESTIG_TRIGGERED&measureContext=Alert,Log&timeSelectionType=relative&timeLast=1&timeType=hours&uistate=id-1524314696471-110&lastNav=20180421124509'
 
 class AlertHandler():
     sleeptime = 5
@@ -28,7 +26,7 @@ class AlertHandler():
         options.add_argument('--ignore-certificate-errors')
         options.add_argument("--test-type")
 
-        self.driver = webdriver.Chrome(r'C:\Users\c5266897\Downloads\chromedriver.exe', options=options)
+        self.driver = webdriver.Chrome(r'C:\Users\xxxxx\Downloads\chromedriver.exe', options=options)
         #--------URL----------
         self.driver.get(live)
         self.driver.maximize_window()
